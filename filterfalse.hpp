@@ -16,13 +16,13 @@ namespace itertools
                 decltype(temp.begin()) iter; // for pass over the temp. type = (iterator)
 
             public:
-                iterator(const filterfalse& f, decltype(temp.begin()) i) : ff(f), iter(i) { }
-
-                auto operator*() 
-                {
-                    if (iter == ff.temp.begin() && ff.func(*iter)) {
+                iterator(const filterfalse& f, decltype(temp.begin()) i) : ff(f), iter(i) {
+                    if (iter == ff.temp.begin() && ff.func(*iter))
                         ++(*this);
-                    }
+                }
+
+                auto operator*() const
+                {
                     return *iter;
                 }
 
