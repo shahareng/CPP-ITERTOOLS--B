@@ -31,7 +31,7 @@ namespace itertools
                 iterator &operator++()
                 {
                     ++iter;
-                    while (iter != ff.temp.end() && !ff.func(*iter))
+                    while (iter != ff.temp.end() && ff.func(*iter))
                     {
                         ++iter;
                     }
@@ -43,7 +43,7 @@ namespace itertools
                 {
                     iterator copy = *this;
                     iter++;
-                    while (iter != ff.temp.end() && !ff.func(*iter))
+                    while (iter != ff.temp.end() && ff.func(*iter))
                     {
                         iter++;
                     }
