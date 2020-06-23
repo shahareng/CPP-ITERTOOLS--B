@@ -18,7 +18,7 @@ namespace itertools
             public:
                 iterator(const filterfalse& f, decltype(temp.begin()) i) : ff(f), iter(i) { }
 
-                auto operator*() const
+                auto operator*() 
                 {
                     if (iter == ff.temp.begin() && ff.func(*iter)) {
                         ++(*this);
