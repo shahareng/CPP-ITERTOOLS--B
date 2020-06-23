@@ -20,17 +20,20 @@ namespace itertools
 
                 auto operator*() const
                 {
-                    // while(ff.func(*iter))
-                    // {
-                    //     iter++;
-                    // }
+                    if (iter == ff.temp.begin() && ff.func(*iter)) {
+                        iter++;
+                        while(iter != ff.temp.end() && ff.func(*iter)))
+                        {
+                            iter++;
+                        }
+                    }
                     return *iter;
                 }
 
                 //++iBegin
                 iterator &operator++()
                 {
-                    //++iter;
+                    ++iter;
                     while (iter != ff.temp.end() && ff.func(*iter))
                     {
                         ++iter;
@@ -42,7 +45,7 @@ namespace itertools
                 const iterator operator++(int) 
                 {
                     iterator copy = *this;
-                    //iter++;
+                    iter++;
                     while (iter != ff.temp.end() && ff.func(*iter))
                     {
                         iter++;
