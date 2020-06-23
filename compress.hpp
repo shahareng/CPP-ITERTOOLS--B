@@ -20,13 +20,11 @@ namespace itertools
             public:
                 iterator(const compress& a1, decltype(temp1.begin()) i1, decltype(temp2.begin()) i2) : com(a1), iter1(i1), iter2(i2) { }
 
-                auto operator*() const
+                auto operator*()
                 {
-                //    while(!(*iter2))
-                //     {
-                //         iter1++;
-                //         iter2++;
-                //     }
+                    if (iter == ff.temp.begin() && ff.func(*iter)) {
+                        ++(*this);
+                    }
                     return *iter1;
                 }
 
