@@ -21,11 +21,7 @@ namespace itertools
                 auto operator*() const
                 {
                     if (iter == ff.temp.begin() && ff.func(*iter)) {
-                        iter++;
-                        while(iter != ff.temp.end() && ff.func(*iter)))
-                        {
-                            iter++;
-                        }
+                        ++(*this);
                     }
                     return *iter;
                 }
