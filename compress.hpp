@@ -18,13 +18,13 @@ namespace itertools
                 decltype(temp2.begin()) iter2; // for pass over the container. type = (iterator)
 
             public:
-                iterator(const compress& a1, decltype(temp1.begin()) i1, decltype(temp2.begin()) i2) : com(a1), iter1(i1), iter2(i2) { }
-
-                auto operator*()
-                {
-                    if (iter1 == com.temp1.begin() && !(*iter2)) {
+                iterator(const compress& a1, decltype(temp1.begin()) i1, decltype(temp2.begin()) i2) : com(a1), iter1(i1), iter2(i2) {
+                    if (iter1 == com.temp1.begin() && !(*iter2))
                         ++(*this);
-                    }
+                }
+
+                auto operator*() const
+                { 
                     return *iter1;
                 }
 
