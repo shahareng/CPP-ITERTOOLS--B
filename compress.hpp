@@ -22,7 +22,7 @@ namespace itertools
 
                 auto operator*()
                 {
-                    if (iter == ff.temp.begin() && ff.func(*iter)) {
+                    if (iter1 == com.temp1.begin() && !(*iter2)) {
                         ++(*this);
                     }
                     return *iter1;
