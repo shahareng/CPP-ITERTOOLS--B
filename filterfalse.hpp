@@ -30,7 +30,7 @@ namespace itertools
                 //++iBegin
                 iterator &operator++()
                 {
-                    ++iter;
+                    //++iter;
                     while (iter != ff.temp.end() && ff.func(*iter))
                     {
                         ++iter;
@@ -42,7 +42,7 @@ namespace itertools
                 const iterator operator++(int) 
                 {
                     iterator copy = *this;
-                    iter++;
+                    //iter++;
                     while (iter != ff.temp.end() && ff.func(*iter))
                     {
                         iter++;
